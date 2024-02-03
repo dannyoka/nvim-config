@@ -15,6 +15,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "tsserver",
+          "gopls"
         },
       })
     end,
@@ -29,6 +30,9 @@ return {
         capabilities = capabilities
       })
       lspconfig.tsserver.setup({
+        capabilities = capabilities
+      })
+      lspconfig.gopls.setup({
         capabilities = capabilities
       })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
