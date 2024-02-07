@@ -1,10 +1,16 @@
 return {
   'stevearc/oil.nvim',
-  view_options = {
-    show_hidden = true
-  },
   config = function()
-    require("oil").setup()
+    require("oil").setup({
+      view_options = {
+        show_hidden = true
+      },
+      keymaps = {
+        ["<C-h>"] = false,
+        ["<C-p>"] = false,
+        ["<C-s>"] = false,
+      },
+    })
     vim.keymap.set("n", "-", "<CMD>Oil<CR>")
   end
 }
