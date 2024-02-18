@@ -15,7 +15,8 @@ return {
         ensure_installed = {
           "lua_ls",
           "tsserver",
-          "gopls"
+          "gopls",
+          "pyright",
         },
       })
     end,
@@ -33,6 +34,9 @@ return {
         capabilities = capabilities
       })
       lspconfig.gopls.setup({
+        capabilities = capabilities
+      })
+      lspconfig.pyright.setup({
         capabilities = capabilities
       })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
