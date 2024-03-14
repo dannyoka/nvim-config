@@ -3,6 +3,12 @@ return {
     "tpope/vim-fugitive",
   },
   {
+    "ruifm/gitlinker.nvim",
+    config = function()
+      require("gitlinker").setup()
+    end
+  },
+  {
     "lewis6991/gitsigns.nvim",
     config = function()
       local current_line_blame_opts = {
