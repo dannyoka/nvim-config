@@ -43,6 +43,7 @@ vim.keymap.set("n", "<leader>w", "<C-w>")
 
 vim.keymap.set("n", "L", ":BufferNext<CR>")
 vim.keymap.set("n", "H", ":BufferPrev<CR>")
+vim.keymap.set("n", "<leader>vs", ":vsplit<CR>")
 
 vim.keymap.set("n", "<leader>bc", "<cmd>BufferClose<CR>")
 vim.keymap.set("n", "<leader>bca", "<cmd>BufferCloseAllButCurrent<CR>")
