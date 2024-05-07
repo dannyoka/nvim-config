@@ -5,7 +5,7 @@ return { {
     local config = require("nvim-treesitter.configs")
     config.setup({
       auto_install = true,
-      ensure_installed = { "lua", "javascript", "typescript" },
+      ensure_installed = { "lua", "javascript", "typescript", "markdown", "markdown_inline" },
       highlight = { enable = true },
       indent = { enable = true },
       textobjects = {
@@ -30,8 +30,8 @@ return { {
       }
     })
   end
-}, 
+},
   {
-  "nvim-treesitter/nvim-treesitter-textobjects",
+    "nvim-treesitter/nvim-treesitter-textobjects",
   }
 }
