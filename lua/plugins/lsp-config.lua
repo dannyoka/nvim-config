@@ -18,6 +18,7 @@ return {
 					"gopls",
 					"pyright",
 					"intelephense",
+					"graphql",
 				},
 			})
 		end,
@@ -32,6 +33,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.tsserver.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.graphql.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.gopls.setup({

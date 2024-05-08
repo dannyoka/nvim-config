@@ -2,11 +2,6 @@ return {
 	"nvimdev/lspsaga.nvim",
 	config = function()
 		require("lspsaga").setup({
-			definition = {
-				keys = {
-					edit = "o",
-				},
-			},
 			lightbulb = {
 				enable = true,
 				virtual_text = true,
