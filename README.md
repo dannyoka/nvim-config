@@ -1,3 +1,1 @@
-# Hello world
-
-## something else
+# Danny's Neovim Config
