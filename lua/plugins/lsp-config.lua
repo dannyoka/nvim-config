@@ -19,6 +19,8 @@ return {
 					"pyright",
 					"intelephense",
 					"graphql",
+					-- "emmet_ls",
+					"emmet_language_server",
 				},
 			})
 		end,
