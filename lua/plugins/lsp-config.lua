@@ -14,7 +14,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"tsserver",
+					"ts_ls",
 					"gopls",
 					"pyright",
 					"intelephense",
@@ -34,10 +34,10 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.tsserver.setup({
+			lspconfig.graphql.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.graphql.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.gopls.setup({
