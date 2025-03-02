@@ -19,8 +19,8 @@ return {
           "pyright",
           "intelephense",
           "graphql",
-          -- "emmet_ls",
           "emmet_language_server",
+          "emmet_ls",
         },
       })
     end,
@@ -50,6 +50,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.graphql.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.emmet_ls.setup({
         capabilities = capabilities,
       })
       lspconfig.emmet_language_server.setup({
