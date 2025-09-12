@@ -11,15 +11,14 @@ return {
         null_ls.builtins.formatting.isort,
         null_ls.builtins.formatting.gofumpt,
         null_ls.builtins.formatting.goimports,
-        null_ls.builtins.formatting.golines,
+        -- null_ls.builtins.formatting.golines,
       },
     })
     vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 
-
-    vim.api.nvim_create_autocmd('BufWritePre', {
-      desc = 'Format before save',
-      pattern = '*',
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      desc = "Format before save",
+      pattern = "*",
       callback = function()
         vim.lsp.buf.format()
       end,

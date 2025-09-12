@@ -21,6 +21,7 @@ return {
           "graphql",
           "emmet_language_server",
           "emmet_ls",
+          "ruff",
         },
       })
     end,
@@ -55,10 +56,14 @@ return {
       lspconfig.emmet_ls.setup({
         capabilities = capabilities,
       })
+      lspconfig.ruff.setup({
+        capabilities = capabilities,
+      })
       lspconfig.emmet_language_server.setup({
         capabilities = capabilities,
       })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+      vim.keymap.set("n", "<leader>r", vim.lsp.buf.references, {})
       -- vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
       vim.keymap.set("n", "<leader>err", vim.diagnostic.open_float, {})
