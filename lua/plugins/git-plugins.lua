@@ -6,7 +6,7 @@ return {
     "ruifm/gitlinker.nvim",
     config = function()
       require("gitlinker").setup()
-    end
+    end,
   },
   {
     "lewis6991/gitsigns.nvim",
@@ -20,9 +20,9 @@ return {
         current_line_blame = true,
         current_line_blame_opts = current_line_blame_opts,
       })
-      vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
-      vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
-      vim.keymap.set("n", "<leader>gc", ":G<CR>", {})
+      -- vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
+      -- vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
+      -- vim.keymap.set("n", "<leader>gc", ":G<CR>", {})
     end,
   },
 }
