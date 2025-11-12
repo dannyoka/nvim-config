@@ -1,0 +1,1 @@
+{"name":"emmet-ls","metrics":{"completion_time":1739429147615,"start_time":1739429146079},"links":{"bin":{"emmet-ls":"node_modules/.bin/emmet-ls"},"share":{},"opt":{}},"secondary_sources":[],"schema_version":"1.1","primary_source":{"type":"registry+v1","id":"pkg:npm/emmet-ls@0.4.2"}}
