@@ -12,8 +12,30 @@ return {
   config = function()
     local dap = require("dap")
     local dapui = require("dapui")
-    require("dapui").setup()
-    require("dap-go").setup()
+    local opts = {
+      layouts = {
+        -- {
+        --   elements = {
+        --     -- "scopes",
+        --     "breakpoints",
+        --     "stacks",
+        --     -- "watches",
+        --   },
+        --   size = 40,
+        --   position = "left",
+        -- },
+        {
+          elements = {
+            { id = "scopes", size = 0.2 },
+            { id = "repl",   size = 0.8 },
+          },
+          size = 0.4,
+          position = "right",
+        },
+      },
+    }
+    require("dapui").setup(opts)
+    require("dap-go").setup(opts)
     require("dap-python").setup()
     require("nvim-dap-virtual-text").setup()
     dap.listeners.before.attach.dapui_config = function()
@@ -42,21 +64,7 @@ return {
         name = "Debug main.go",
         request = "launch",
         program = "${workspaceFolder}/main.go",
-        console = "integratedTerminal",
-      },
-      {
-        type = "go",
-        name = "Debug 2 main.go",
-        request = "launch",
-        program = "${workspaceFolder}/main.go",
-        console = "integratedTerminal",
-      },
-      {
-        type = "go",
-        name = "Debug 3 main.go",
-        request = "launch",
-        program = "${workspaceFolder}/cmd/main.go",
-        console = "integratedTerminal",
+        console = "integratedConsole",
       },
     }
     dap.configurations.python = {

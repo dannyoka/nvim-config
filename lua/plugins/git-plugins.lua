@@ -25,4 +25,7 @@ return {
       -- vim.keymap.set("n", "<leader>gc", ":G<CR>", {})
     end,
   },
+  {
+    "sindrets/diffview.nvim",
+  },
 }
